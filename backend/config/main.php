@@ -13,13 +13,13 @@ return [
     'bootstrap' => ['log'],
     'modules' => [],
     'components' => [
-        'view' => [
-            'theme' => [
-                'pathMap' => [
-                    '@app/views' => '@vendor/dmstr/yii2-adminlte-asset/example-views/yiisoft/yii2-advanced-app'
-                ],
-            ],
-        ],
+//        'view' => [
+//            'theme' => [
+//                'pathMap' => [
+//                    '@app/views' => '@vendor/dmstr/yii2-adminlte-asset/example-views/yiisoft/yii2-advanced-app'
+//                ],
+//            ],
+//        ],-
         'request' => [
             'csrfParam' => '_csrf-backend',
         ],
