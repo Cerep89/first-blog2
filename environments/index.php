@@ -32,9 +32,9 @@ return [
     'Development' => [
         'path' => 'dev',
         'setWritable' => [
-            'admin/runtime',
+            'backend/runtime',
             'admin/assets',
-            'runtime',
+            'frontend/runtime',
             'assets',
         ],
         'setExecutable' => [
