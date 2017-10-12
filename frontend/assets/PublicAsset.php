@@ -16,7 +16,7 @@ class PublicAsset extends AssetBundle
     public $basePath = '@webroot';
     public $baseUrl = '@web';
     public $js = [
-        "public/libs/jquery-1.12.4.min.js",
+//        "public/libs/jquery-1.12.4.min.js",
         "public/libs/jquery-migrate-1.2.1.js",
         //             <!-- Bootstrap-->
         "public/libs/bootstrap/bootstrap.min.js",
@@ -53,10 +53,10 @@ class PublicAsset extends AssetBundle
 
         "https://maps.googleapis.com/maps/api/js?key=AIzaSyBqQ_bBw186KJnMcRByvn5ffZueg88wp1E",
         //               <!-- Maps customization-->
-        "public/js/custom-map.js",
+//        "public/js/custom-map.js",
         //               <!--Contact form-->
 		"public/plugins/jqBootstrapValidation.js",
-		"public/plugins/contact_me.js",
+//		"public/plugins/contact_me.js",
         //               <!--Simple check for contact-form-->
         "public/js/contactformcheck.js",
     ];
