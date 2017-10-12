@@ -32,8 +32,8 @@ return [
     'Development' => [
         'path' => 'dev',
         'setWritable' => [
-            'backend/runtime',
-            'backend/web/assets',
+            'admin/runtime',
+            'admin/web/assets',
             'frontend/runtime',
             'frontend/web/assets',
         ],
