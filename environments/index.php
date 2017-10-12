@@ -33,9 +33,9 @@ return [
         'path' => 'dev',
         'setWritable' => [
             'admin/runtime',
-            'admin/web/assets',
-            'frontend/runtime',
-            'frontend/web/assets',
+            'admin/assets',
+            'runtime',
+            'assets',
         ],
         'setExecutable' => [
             'yii',
