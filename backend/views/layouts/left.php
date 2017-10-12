@@ -37,11 +37,13 @@ use yii\bootstrap\Nav;
                 'options' => ['class' => 'sidebar-menu'],
                 'items' => [
                     [
-                        'label' => '<span class="fa fa-angle-down"></span><span class="text-info">Menu Yii2</span>',
+                        'label' => '<span class="fa fa-angle-down"></span><span class="text-info">Pages</span>',
                         'url' => '#'
                     ],
-                    ['label' => '<span class="fa fa-file-code-o"></span> Gii', 'url' => ['/gii']],
-                    ['label' => '<span class="fa fa-dashboard"></span> Debug', 'url' => ['/debug']],
+                    ['label' => '<span class="fa fa-home"></span>Home page', 'url' => ['/index']],
+                    ['label' => '<span class="fa fa-users"></span> About page', 'url' => ['/about']],
+                    ['label' => '<span class="fa fa-volume-control-phone"></span> Contact page', 'url' => ['/contacts']],
+//                    ['label' => '<span class="fa fa-volume-control-phone"></span> Debug', 'url' => ['/about']],
                 ],
             ]
         );
