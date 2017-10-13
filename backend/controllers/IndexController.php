@@ -132,7 +132,7 @@ class IndexController extends Controller
             $article = $this->findModel($id);
             $file = UploadedFile::getInstance($model, 'image');
 
-            if ($article->saveImage($model->uploadFile($file, $article->image))) {
+            if ($article->saveImage($model->uploadFile($file, $article->first_image_left))) {
                 return $this->redirect(['view', 'id' => $article->id]);
             }
         }

@@ -12,7 +12,7 @@ use yii\widgets\ActiveForm;
 
     <?php $form = ActiveForm::begin(); ?>
 
-    <?= Html::a('Set Image', ['set-image', 'id' => $model->id], ['class' => 'btn btn-default']) ?>
+    <?= Html::a('Set Image', ['set-image', 'id' => $model->id, 'a' => 'first_image_center'], ['class' => 'btn btn-default']) ?>
 
 
     <?= $form->field($model, 'first_image_left')->textInput(['maxlength' => true]) ?>
