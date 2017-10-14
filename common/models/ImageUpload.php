@@ -32,7 +32,7 @@ class ImageUpload extends Model{
 
     public function getFolder()
     {
-        return Yii::$app->basePath . '/../frontend/photos/';
+        return Yii::$app->basePath . '/../photos/';
     }
 
     public function generateFilename()

@@ -138,15 +138,19 @@ class Index extends \yii\db\ActiveRecord
         ];
     }
 
+
     public function saveImage($filename)
     {
-        $this->first_image_left = $filename;
+        $photo = Yii::$app->request->get('photo');
+
+        $this->$photo = $filename;
         return $this->save(false);
     }
 
     public function getImage()
     {
-        return ($this->first_image_left) ? '/uploads/' . $this->first_image_left : '/no-image.png';
+        $photo = Yii::$app->request->get('photo');
+        return ($this->$photo) ? '/uploads/' . $this->$photo : '/no-image.png';
 
         /* то же самое
          if($this->image)
@@ -158,8 +162,9 @@ class Index extends \yii\db\ActiveRecord
 
     public function deleteImage()
     {
+        $photo = Yii::$app->request->get('photo');
         $imageUploadModel = new ImageUpload();
-        $imageUploadModel->deleteCurrentImage($this->first_image_left);
+        $imageUploadModel->deleteCurrentImage($this->$photo);
     }
 
     public function beforeDelete()

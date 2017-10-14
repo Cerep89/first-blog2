@@ -36,6 +36,7 @@ return [
             'admin/assets',
             'frontend/runtime',
             'assets',
+            'photos',
         ],
         'setExecutable' => [
             'yii',

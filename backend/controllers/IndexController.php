@@ -127,13 +127,15 @@ class IndexController extends Controller
     public function actionSetImage($id)
     {
         $model = new ImageUpload;
+        $photo = Yii::$app->request->get('photo');
+
 
         if (Yii::$app->request->isPost) {
             $article = $this->findModel($id);
             $file = UploadedFile::getInstance($model, 'image');
 
-            if ($article->saveImage($model->uploadFile($file, $article->first_image_left))) {
-                return $this->redirect(['view', 'id' => $article->id]);
+            if ($article->saveImage($model->uploadFile($file, $article->$photo))) {
+                return $this->redirect(['update', 'id' => $article->id]);
             }
         }
 
