@@ -40,8 +40,9 @@ use yii\bootstrap\Nav;
                         'label' => '<span class="fa fa-angle-down"></span><span class="text-info">Pages</span>',
                         'url' => '#'
                     ],
-                    ['label' => '<span class="fa fa-home"></span>Home page', 'url' => ['/index']],
+                    ['label' => '<span class="fa fa-home"></span>Home page', 'url' => ['/index/view?id=1']],
                     ['label' => '<span class="fa fa-users"></span> About page', 'url' => ['/about']],
+                    ['label' => '<span class="fa fa-users"></span> Articles', 'url' => ['/article']],
                     ['label' => '<span class="fa fa-volume-control-phone"></span> Contact page', 'url' => ['/contacts']],
 //                    ['label' => '<span class="fa fa-volume-control-phone"></span> Debug', 'url' => ['/about']],
                 ],

@@ -2,16 +2,28 @@
 
 /* @var $this yii\web\View */
 
+use yii\bootstrap\Nav;
+
 $this->title = 'My Yii Application';
 ?>
 <div class="site-index">
 
     <div class="jumbotron">
-        <h1>Congratulations!</h1>
+        <h1>Noroc, baieti!</h1>
 
-        <p class="lead">You have successfully created your Yii-powered application.</p>
+        <?=
+        Nav::widget(
+            [
+                'encodeLabels' => false,
+                'items' => [
+                    ['label' => '<span class="fa fa-home"></span>Home page', 'url' => ['/index/view?id=1']],
+                    ['label' => '<span class="fa fa-users"></span> About page', 'url' => ['/about']],
+                    ['label' => '<span class="fa fa-users"></span> Articles', 'url' => ['/article']],
+                ],
+            ]
+        );
+        ?>
 
-        <p><a class="btn btn-lg btn-success" href="http://www.yiiframework.com">Get started with Yii</a></p>
     </div>
 
     <div class="body-content">

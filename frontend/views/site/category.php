@@ -259,86 +259,13 @@
                                     </h5>
                                     <div class="b-tags">
                                         <ul class="list-unstyled">
+                                            <?php foreach ($articles as $article ):?>
                                             <li>
                                                 <a href="#">
-                                                    Suscipit
+                                                    <?= $article->title;?>
                                                 </a>
                                             </li>
-                                            <li>
-                                                <a href="#">
-                                                    Egestas
-                                                </a>
-                                            </li>
-                                            <li>
-                                                <a href="#">
-                                                    Porttitor
-                                                </a>
-                                            </li>
-                                            <li>
-                                                <a href="#">
-                                                    Quisque
-                                                </a>
-                                            </li>
-                                            <li>
-                                                <a href="#">
-                                                    Metus
-                                                </a>
-                                            </li>
-                                            <li>
-                                                <a href="#">
-                                                    Venenatis
-                                                </a>
-                                            </li>
-                                            <li>
-                                                <a href="#">
-                                                    Elementum
-                                                </a>
-                                            </li>
-                                            <li>
-                                                <a href="#">
-                                                    Lacinia
-                                                </a>
-                                            </li>
-                                            <li>
-                                                <a href="#">
-                                                    Fringilla
-                                                </a>
-                                            </li>
-                                            <li>
-                                                <a href="#">
-                                                    Tellus
-                                                </a>
-                                            </li>
-                                            <li>
-                                                <a href="#">
-                                                    Sigula
-                                                </a>
-                                            </li>
-                                            <li>
-                                                <a href="#">
-                                                    Libero
-                                                </a>
-                                            </li>
-                                            <li>
-                                                <a href="#">
-                                                    Iaculis
-                                                </a>
-                                            </li>
-                                            <li>
-                                                <a href="#">
-                                                    Donec
-                                                </a>
-                                            </li>
-                                            <li>
-                                                <a href="#">
-                                                    Sodales
-                                                </a>
-                                            </li>
-                                            <li>
-                                                <a href="#">
-                                                    Fusce
-                                                </a>
-                                            </li>
+                                            <?php endforeach;?>
                                         </ul>
                                     </div>
                                 </div>

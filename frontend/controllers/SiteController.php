@@ -1,6 +1,7 @@
 <?php
 namespace frontend\controllers;
 
+use common\models\Article;
 use common\models\Index;
 use Yii;
 use yii\base\InvalidParamException;
@@ -217,7 +218,12 @@ class SiteController extends Controller
 
     public function actionCategory()
     {
-        return $this->render('category');
+        $article = new Article();
+        $articles = $article->getTag();
+
+        return $this->render('category', [
+            'articles' => $articles,
+        ]);
     }
 
     public function actionArticle()
