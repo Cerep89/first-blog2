@@ -62,6 +62,9 @@ class m171010_183324_create_index_table extends Migration
             'three_proiect_three_number' => $this->integer(),
             'three_proiect_three_title' => $this->string(),
             'three_proiect_three_text' => $this->string(),
+            'three_proiect_for_number' => $this->integer(),
+            'three_proiect_for_title' => $this->string(),
+            'three_proiect_for_text' => $this->string(),
             /****************************
              * Section for
              ********************/
@@ -87,7 +90,6 @@ class m171010_183324_create_index_table extends Migration
             'five_text_right' => $this->string(),
             'five_button_right' => $this->string(),
             'five_button_link_right' => $this->string(),
-
 
 
 //

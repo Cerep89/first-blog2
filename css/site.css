@@ -118,3 +118,17 @@ a.desc:after {
 .nav > li > form > button.logout:focus {
     outline: none;
 }
+
+/*
+this is pagination style
+*/
+
+.pagination li span
+{
+    border: none;
+}
+
+.pagination li a
+{
+    border: none;
+}

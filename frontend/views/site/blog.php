@@ -88,54 +88,14 @@ use yii\widgets\LinkPager;
                                     </div>
                                 </div>
                             <?php endforeach; ?>
-                            <div class="b-pagination text-center wow fadeInUp">
 
+                            <div class="b-pagination text-center wow fadeInUp">
                                 <?php
 
                                 echo LinkPager::widget([
                                     'pagination' => $pages,
-                                    'options' => [
-                                        'class' => 'b-pagination text-center wow fadeInUp',
-                                    ],
-                                ]); ?>
 
-                                <ul>
-                                    <li class="pag-current">
-                                        <a href="#">
-                                            1
-                                        </a>
-                                    </li>
-                                    <li class="pag-current">
-                                        <a href="#">
-                                            2
-                                        </a>
-                                    </li>
-                                    <li>
-                                        <a href="#">
-                                            3
-                                        </a>
-                                    </li>
-                                    <li class="pag-divider">
-                                        <a href="javascript:void(0);">
-                                            ...
-                                        </a>
-                                    </li>
-                                    <li>
-                                        <a href="#">
-                                            12
-                                        </a>
-                                    </li>
-                                    <li>
-                                        <a href="#">
-                                            13
-                                        </a>
-                                    </li>
-                                    <li>
-                                        <a href="#">
-                                            14
-                                        </a>
-                                    </li>
-                                </ul>
+                                ]); ?>
                             </div>
                         </div>
                     </div>
