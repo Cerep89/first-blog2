@@ -28,12 +28,14 @@ use yii\helpers\Url;
                         <li>
                             <a href="<?= Url::toRoute(['site/index']); ?>">Home</a>
                         </li>
-                        <li class="dropdown"><a href="javascript:void(0)" data-toggle="dropdown" class="dropdown-toggle">Blog<b class="caret"></b>
+
+                        <li class="dropdown"><a href="javascript:void(0)" data-toggle="dropdown" class="dropdown-toggle"><a href="<?= Url::toRoute(['site/blog']); ?>" >Blog<b class="caret"></b></a>
                         <!-- Classic Dropdown--></a>
                         <ul role="menu" class="dropdown-menu">
                             <li><a href="<?= Url::toRoute(['site/category']); ?>" >Category 1</a></li>
                         </ul>
                         </li>
+
                         <li>
                             <a href="<?= Url::toRoute(['site/about']); ?>">About</a>
                         </li>

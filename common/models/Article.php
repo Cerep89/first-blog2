@@ -136,11 +136,4 @@ class Article extends \yii\db\ActiveRecord
         ArticleTag::deleteAll(['article_id' => $this->id]);
     }
 
-    public function getTag()
-    {
-        $tag = Tag::find()->all();
-
-        return $tag;
-
-    }
 }

@@ -3,8 +3,10 @@ namespace frontend\controllers;
 
 use common\models\Article;
 use common\models\Index;
+use common\models\Tag;
 use Yii;
 use yii\base\InvalidParamException;
+use yii\data\Pagination;
 use yii\web\BadRequestHttpException;
 use yii\web\Controller;
 use yii\filters\VerbFilter;
@@ -216,14 +218,34 @@ class SiteController extends Controller
         ]);
     }
 
+    public function actionBlog()
+    {
+        $query = Article::find();
+        $countQuery = clone $query;
+        $pages = new Pagination(['totalCount' => $countQuery->count(), 'pageSize' => 1]);
+        $articles = $query->offset($pages->offset)
+            ->limit($pages->limit)
+            ->all();
+
+        $popular = Article::find()->orderBy('viewed desc')->limit(3)->all();
+
+        $tags = Tag::find()->all();
+
+
+
+        return $this->render('blog', [
+            'articles' => $articles,
+            'pages' => $pages,
+            'popular' => $popular,
+            'tags' => $tags,
+        ]);
+
+
+    }
+
     public function actionCategory()
     {
-        $article = new Article();
-        $articles = $article->getTag();
-
-        return $this->render('category', [
-            'articles' => $articles,
-        ]);
+        return $this->render('category');
     }
 
     public function actionArticle()
