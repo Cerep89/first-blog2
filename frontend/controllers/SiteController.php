@@ -3,6 +3,7 @@ namespace frontend\controllers;
 
 use common\models\Article;
 use common\models\Index;
+use common\models\About;
 use common\models\Tag;
 use Yii;
 use yii\base\InvalidParamException;
@@ -145,7 +146,10 @@ class SiteController extends Controller
      */
     public function actionAbout()
     {
-        return $this->render('about');
+        $about = About::find()->asArray()->all();
+        return $this->render('about', [
+            'about'=>$about,
+        ]);
     }
 
     /**
@@ -252,4 +256,6 @@ class SiteController extends Controller
     {
         return $this->render('single');
     }
+
+
 }

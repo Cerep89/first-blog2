@@ -13,7 +13,11 @@ $this->params['breadcrumbs'][] = $this->title;
 <div class="b-page-content with-layer-bg">
     <!-- ==========================-->
     <!-- PAGES BACKGROUND -->
+    <!--Foreach from about model-->
     <!-- ==========================-->
+<?php
+    foreach ($about as $val):
+        ?>
     <div class="b-layer">
         <div class="layer-bg page-layer-bg4">
             <div class="layer-content">
@@ -34,13 +38,11 @@ $this->params['breadcrumbs'][] = $this->title;
                                 </ul>
                             </div>
                             <h1 class="main-heading">
-                                About Us
+                                <?= $val['about_title'] ?>
                             </h1>
                             <div class="heading-text">
                                 <p>
-                                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras sollicitudin, tellus
-                                    <br>
-                                    vitae condimentum egestas, libero dolor auctor tellus
+                                    <?= $val['about_text'] ?>
                                 </p>
                             </div>
                         </div>
@@ -61,55 +63,49 @@ $this->params['breadcrumbs'][] = $this->title;
                         <div class="row equal">
                             <div class="b-info-column col-xs-4 col-sm-4">
                                 <div class="info-column-icon">
-                                    <i class="flaticon-technology"></i>
+                                    <i <img src="<?= 'photos/' . $val['about_left_item_img'] ?>" alt="" width="174" height="25"></i>
                                     <span class="step-number">
                                                     1
                                                 </span>
                                 </div>
                                 <h6 class="info-column-title">
-                                    Cras Posuere
+                                    <?= $val['about_left_item_title'] ?>
                                 </h6>
                                 <div class="info-column-text">
                                     <p>
-                                        Phasellus sed elementum nulla. Integer
-                                        <br>
-                                        eleifend lobortis felis in auctor
+                                        <?= $val['about_left_item_text'] ?>
                                     </p>
                                 </div>
                             </div>
                             <div class="b-info-column col-xs-4 col-sm-4">
                                 <div class="info-column-icon">
-                                    <i class="flaticon-tool"></i>
+                                    <i <img src="<?= 'photos/' . $val['about_center_item_img'] ?>" alt="" width="174" height="25"></i>
                                     <span class="step-number">
                                                     2
                                                 </span>
                                 </div>
                                 <h6 class="info-column-title">
-                                    Vestibulum Urna
+                                    <?= $val['about_center_item_title'] ?>
                                 </h6>
                                 <div class="info-column-text">
                                     <p>
-                                        Phasellus suscipit, mi vel blandit
-                                        <br>
-                                        feugiat, leo tellus
+                                        <?= $val['about_center_item_text'] ?>
                                     </p>
                                 </div>
                             </div>
                             <div class="b-info-column col-xs-4 col-sm-4">
                                 <div class="info-column-icon">
-                                    <i class="flaticon-atom"></i>
+                                    <i <img src="<?= 'photos/' . $val['about_right_item_img'] ?>" alt="" width="174" height="25"></i>
                                     <span class="step-number">
                                                     3
                                                 </span>
                                 </div>
                                 <h6 class="info-column-title">
-                                    Aliquam Euismod
+                                    <?= $val['about_right_item_title'] ?>
                                 </h6>
                                 <div class="info-column-text">
                                     <p>
-                                        Maecenas est nisi, rhoncus a lobortis
-                                        <br>
-                                        id, cursus a metus
+                                        <?= $val['about_right_item_text'] ?>
                                     </p>
                                 </div>
                             </div>
@@ -688,4 +684,11 @@ $this->params['breadcrumbs'][] = $this->title;
         </div>
     </div>
 </div>
+<!-- ============================================
+        <?php
+endforeach;
+
+?>
+<!--============================================== -->
+
 </div>

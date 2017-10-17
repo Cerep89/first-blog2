@@ -16,17 +16,23 @@ use yii\widgets\ActiveForm;
 
     <?= $form->field($model, 'about_text')->textInput(['maxlength' => true]) ?>
 
+    <?= Html::a('about_left_item_img', ['set-image', 'id' => $model->id, 'photo' => 'about_left_item_img'], ['class' => 'btn btn-default']) ?>
+
     <?= $form->field($model, 'about_left_item_img')->textInput(['maxlength' => true]) ?>
 
     <?= $form->field($model, 'about_left_item_title')->textInput(['maxlength' => true]) ?>
 
     <?= $form->field($model, 'about_left_item_text')->textInput(['maxlength' => true]) ?>
 
+    <?= Html::a('about_center_item_img', ['set-image', 'id' => $model->id, 'photo' => 'about_center_item_img'], ['class' => 'btn btn-default']) ?>
+
     <?= $form->field($model, 'about_center_item_img')->textInput(['maxlength' => true]) ?>
 
     <?= $form->field($model, 'about_center_item_title')->textInput(['maxlength' => true]) ?>
 
     <?= $form->field($model, 'about_center_item_text')->textInput(['maxlength' => true]) ?>
+
+    <?= Html::a('about_right_item_img', ['set-image', 'id' => $model->id, 'photo' => 'about_right_item_img'], ['class' => 'btn btn-default']) ?>
 
     <?= $form->field($model, 'about_right_item_img')->textInput(['maxlength' => true]) ?>
 

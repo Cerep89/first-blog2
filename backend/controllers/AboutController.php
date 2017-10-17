@@ -2,12 +2,14 @@
 
 namespace backend\controllers;
 
+use common\models\ImageUpload;
 use Yii;
 use common\models\About;
 use common\models\AboutSearch;
 use yii\web\Controller;
 use yii\web\NotFoundHttpException;
 use yii\filters\VerbFilter;
+use yii\web\UploadedFile;
 
 /**
  * AboutController implements the CRUD actions for About model.
@@ -121,4 +123,22 @@ class AboutController extends Controller
             throw new NotFoundHttpException('The requested page does not exist.');
         }
     }
+    public function actionSetImage($id)
+    {
+        $model = new ImageUpload;
+        $photo = Yii::$app->request->get('photo');
+
+
+        if (Yii::$app->request->isPost) {
+            $article = $this->findModel($id);
+            $file = UploadedFile::getInstance($model, 'image');
+
+            if ($article->saveImage($model->uploadFile($file, $article->$photo))) {
+                return $this->redirect(['update', 'id' => $article->id]);
+            }
+        }
+
+        return $this->render('image', ['model' => $model]);
+    }
+
 }
