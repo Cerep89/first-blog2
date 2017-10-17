@@ -63,7 +63,7 @@ $this->params['breadcrumbs'][] = $this->title;
                         <div class="row equal">
                             <div class="b-info-column col-xs-4 col-sm-4">
                                 <div class="info-column-icon">
-                                    <i <img src="<?= 'photos/' . $val['about_left_item_img'] ?>" alt="" width="174" height="25"></i>
+                                    <i> <img src="<?= '../photos/' . $val['about_left_item_img'] ?>" alt="" width="120" height="120" style="border-radius: 50%"></i>
                                     <span class="step-number">
                                                     1
                                                 </span>
@@ -79,7 +79,7 @@ $this->params['breadcrumbs'][] = $this->title;
                             </div>
                             <div class="b-info-column col-xs-4 col-sm-4">
                                 <div class="info-column-icon">
-                                    <i <img src="<?= 'photos/' . $val['about_center_item_img'] ?>" alt="" width="174" height="25"></i>
+                                    <i> <img src="<?= '../photos/' . $val['about_center_item_img'] ?>" alt="" width="120" height="120" style="border-radius: 50%"></i>
                                     <span class="step-number">
                                                     2
                                                 </span>
@@ -95,7 +95,7 @@ $this->params['breadcrumbs'][] = $this->title;
                             </div>
                             <div class="b-info-column col-xs-4 col-sm-4">
                                 <div class="info-column-icon">
-                                    <i <img src="<?= 'photos/' . $val['about_right_item_img'] ?>" alt="" width="174" height="25"></i>
+                                    <i> <img src="<?= '../photos/' . $val['about_right_item_img'] ?>" alt="" width="120" height="120" style="border-radius: 50%"></i>
                                     <span class="step-number">
                                                     3
                                                 </span>

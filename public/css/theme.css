@@ -382,6 +382,7 @@ body {
   display: flex;
   justify-content: center;
   align-items: center;
+  box-shadow: 3px 3px 3px;
 }
 .b-info-columns-holder.b-steps-list .b-info-column .info-column-icon .step-number {
   display: block;
